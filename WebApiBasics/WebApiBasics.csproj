@@ -95,10 +95,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Attributes\ExceptionAttribute.cs" />
+    <Compile Include="Attributes\LoggingAttribute.cs" />
     <Compile Include="Bootstrapper\ControllerInstaller.cs" />
-    <Compile Include="Bootstrapper\ProductApplicationServiceInstaller.cs" />
-    <Compile Include="Business\IProductApplicationService.cs" />
-    <Compile Include="Business\ProductApplicationService.cs" />
+    <Compile Include="Bootstrapper\ProductInstaller.cs" />
+    <Compile Include="Business\IProductService.cs" />
+    <Compile Include="Business\ProductService.cs" />
     <Compile Include="Controllers\GetValuesController.cs" />
     <Compile Include="Bootstrapper\WindsorCompositionRoot.cs" />
     <Compile Include="Global.asax.cs">

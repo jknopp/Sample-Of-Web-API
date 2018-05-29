@@ -7,7 +7,7 @@ using WebApiBasics.Models;
 
 namespace WebApiBasics.Business
 {
-    public interface IProductApplicationService
+    public interface IProductService
     {
         IEnumerable<Product> getAllProducts();
         Product getProduct(int id);

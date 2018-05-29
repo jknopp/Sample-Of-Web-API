@@ -6,10 +6,10 @@ using WebApiBasics.Models;
 
 namespace WebApiBasics.Business
 {
-    public class ProductApplicationService : IProductApplicationService
+    public class ProductService : IProductService
     {
         public Product[] products { get; set; }
-        public ProductApplicationService()
+        public ProductService()
         {
             this.products = new Product[]
             {
