@@ -16,12 +16,12 @@ namespace WebApiBasics.Controllers
 {
     [Logging]
     [Exception]
-    public class GetValuesController : ApiController
+    public class ProductController : ApiController
     {
         private readonly IProductService _service;
         private readonly ProductDomainService productDomainService;
         private readonly double x;
-        public GetValuesController(IProductService service, ProductDomainService productService)
+        public ProductController(IProductService service, ProductDomainService productService)
         {
             this._service = service;
             this.productDomainService = productService;
@@ -34,8 +34,8 @@ namespace WebApiBasics.Controllers
         /// ### REMARKS ###
         /// Use this call and retrieve all Products
         /// <code>
-        ///     call this for XML : api/GetValues/getAllProducts?type=XML
-        ///     call this for JSON : api/GetValues/getAllProducts?type=JSON
+        ///     call this for XML : api/GetValues?type=XML
+        ///     call this for JSON : api/GetValues?type=JSON
         /// </code>
         /// </remarks>
         /// <returns></returns>
@@ -56,8 +56,8 @@ namespace WebApiBasics.Controllers
         /// ### REMARKS ###
         /// Use this call and retrieve a Product with Unique Id.
         /// <code>
-        ///     call this for XML : api/GetValues/getProduct/{Id}type=XML
-        ///     call this for JSON : api/GetValues/getProduct/{Id}type=JSON
+        ///     call this for XML : api/GetValues/{Id}?type=XML
+        ///     call this for JSON : api/GetValues/{Id}?type=JSON
         /// </code>
         /// </remarks>
         /// <param name="id">Unique Product Id</param>
@@ -80,8 +80,9 @@ namespace WebApiBasics.Controllers
         /// Simply Check Service.
         /// </summary>
         /// <response code="200">Service is Active!</response>
-        /// <remarks>Check service is active or not ?</remarks>
+        /// <remarks>Check is active or not ?</remarks>
         /// <returns></returns>
+        [HttpPost]
         public HttpResponseMessage CheckService()
         {
             return Request.CreateResponse(HttpStatusCode.OK, "Service is Active!");

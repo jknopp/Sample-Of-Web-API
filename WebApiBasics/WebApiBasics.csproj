@@ -123,7 +123,7 @@
     <Compile Include="Business\ProductDomainService.cs" />
     <Compile Include="Business\ProductService.cs" />
     <Compile Include="Business\UserDomainServices.cs" />
-    <Compile Include="Controllers\GetValuesController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Bootstrapper\WindsorCompositionRoot.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
