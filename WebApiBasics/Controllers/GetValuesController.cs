@@ -15,14 +15,17 @@ using WebApiBasics.Models;
 namespace WebApiBasics.Controllers
 {
     [Logging]
+    [Exception]
     public class GetValuesController : ApiController
     {
         private readonly IProductService _service;
         private readonly ProductDomainService productDomainService;
+        private readonly double x;
         public GetValuesController(IProductService service, ProductDomainService productService)
         {
             this._service = service;
             this.productDomainService = productService;
+            x = productDomainService.CreateProductId();
         }
         /// <summary>
         /// Get All Products in PayFlex
@@ -38,13 +41,13 @@ namespace WebApiBasics.Controllers
         /// <returns></returns>
         /// <response code="200">Successfull Operation</response>
         [ResponseType(typeof(Product))]
-        
+
         [HttpGet]
         public HttpResponseMessage getAllProducts()
         {//error handling yapılabilir.action filter yapılabilir.
             var list = _service.getAllProducts();
             return this.Request.CreateResponse(HttpStatusCode.OK, list);
-            
+
         }
         /// <summary>
         /// Get Unique Product With Unique Id
@@ -65,6 +68,7 @@ namespace WebApiBasics.Controllers
         [SwaggerResponse(HttpStatusCode.OK, "Product", typeof(Product))]
         public HttpResponseMessage getProduct(int id)
         {
+            var y = x;
             var response = _service.getProduct(id);
             if (response == null)
             {
@@ -80,7 +84,7 @@ namespace WebApiBasics.Controllers
         /// <returns></returns>
         public HttpResponseMessage CheckService()
         {
-            return Request.CreateResponse(HttpStatusCode.OK,"Service is Active!");
+            return Request.CreateResponse(HttpStatusCode.OK, "Service is Active!");
         }
     }
 }

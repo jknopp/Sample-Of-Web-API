@@ -7,5 +7,10 @@ namespace WebApiBasics.Business
 {
     public class ProductDomainService : IDomainService
     {
+        public double CreateProductId()
+        {
+            var id = Math.PI;
+            return id;
+        }
     }
 }
