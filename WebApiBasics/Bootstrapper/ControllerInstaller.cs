@@ -18,7 +18,8 @@ namespace WebApiBasics.Bootstrapper
             container.Register(Classes.FromThisAssembly()
                         .BasedOn<ApiController>()
                         .LifestylePerWebRequest()
-                        .Configure(c=>c.Interceptors(typeof(LoggingInterceptor))));
+                        //.Configure(c=>c.Interceptors(typeof(LoggingInterceptor)))
+                        );
         }
     }
 }
