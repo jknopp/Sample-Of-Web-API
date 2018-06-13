@@ -6,8 +6,6 @@ using System.Web;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
 using System.Web.Http;
-using Castle.Core;
-using WebApiBasics.Interceptors;
 
 namespace WebApiBasics.Bootstrapper
 {

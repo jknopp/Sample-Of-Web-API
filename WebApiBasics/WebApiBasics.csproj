@@ -116,7 +116,6 @@
     <Compile Include="Attributes\LoggingAttribute.cs" />
     <Compile Include="Bootstrapper\ControllerInstaller.cs" />
     <Compile Include="Bootstrapper\DomainServiceInstaller.cs" />
-    <Compile Include="Bootstrapper\InterceptorInstaller.cs" />
     <Compile Include="Bootstrapper\ProductInstaller.cs" />
     <Compile Include="Business\IDomainService.cs" />
     <Compile Include="Business\IProductService.cs" />
@@ -128,12 +127,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Interceptors\LoggingInterceptor.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Properties\PublishProfiles\WebApiIISPublish.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
