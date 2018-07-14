@@ -14,8 +14,6 @@ using WebApiBasics.Models;
 
 namespace WebApiBasics.Controllers
 {
-    [Logging]
-    [Exception]
     public class ProductController : ApiController
     {
         private readonly IProductService _service;
@@ -41,7 +39,6 @@ namespace WebApiBasics.Controllers
         /// <returns></returns>
         /// <response code="200">Successfull Operation</response>
         [ResponseType(typeof(Product))]
-
         [HttpGet]
         public HttpResponseMessage getAllProducts()
         {//error handling yapılabilir.action filter yapılabilir.

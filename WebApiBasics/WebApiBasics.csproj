@@ -113,7 +113,6 @@
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Attributes\ExceptionAttribute.cs" />
-    <Compile Include="Attributes\LoggingAttribute.cs" />
     <Compile Include="Bootstrapper\ControllerInstaller.cs" />
     <Compile Include="Bootstrapper\DomainServiceInstaller.cs" />
     <Compile Include="Bootstrapper\InterceptorInstaller.cs" />
@@ -123,14 +122,17 @@
     <Compile Include="Business\ProductDomainService.cs" />
     <Compile Include="Business\ProductService.cs" />
     <Compile Include="Business\UserDomainServices.cs" />
+    <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Bootstrapper\WindsorCompositionRoot.cs" />
+    <Compile Include="Controllers\ReturnMessageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Interceptors\LoggingInterceptor.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TraceLogger\HandlerLogger.cs" />
+    <Compile Include="TraceLogger\Logger.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

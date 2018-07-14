@@ -8,8 +8,10 @@ using System.Net.Http.Headers;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.Dispatcher;
+using System.Web.Http.ExceptionHandling;
 using System.Web.Routing;
 using WebApiBasics.Bootstrapper;
+using WebApiBasics.TraceLogger;
 
 namespace WebApiBasics
 {
@@ -30,6 +32,8 @@ namespace WebApiBasics
             container.Install(FromAssembly.This());
 
             GlobalConfiguration.Configuration.Services.Replace(typeof(IHttpControllerActivator), new WindsorCompositionRoot(container));
+
+            GlobalConfiguration.Configuration.Services.Replace(typeof(IExceptionHandler), new HandlerLogger());
         }
     }
 }
