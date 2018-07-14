@@ -10,6 +10,10 @@ namespace WebApiBasics.Attributes
     {
         public override void OnException(HttpActionExecutedContext actionExecutedContext)
         {
+            if (actionExecutedContext.Exception is NotImplementedException)
+            {
+                actionExecutedContext.Response = new System.Net.Http.HttpResponseMessage(System.Net.HttpStatusCode.NotImplemented);
+            }
             base.OnException(actionExecutedContext);
         }
     }

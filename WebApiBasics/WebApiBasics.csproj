@@ -52,6 +52,14 @@
       <HintPath>..\packages\Castle.Windsor.4.1.0\lib\net45\Castle.Windsor.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="CustomLog4netLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\CustomLog4netLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -105,6 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Libraries\CustomLog4netLibrary.dll" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -115,7 +124,6 @@
     <Compile Include="Attributes\ExceptionAttribute.cs" />
     <Compile Include="Bootstrapper\ControllerInstaller.cs" />
     <Compile Include="Bootstrapper\DomainServiceInstaller.cs" />
-    <Compile Include="Bootstrapper\InterceptorInstaller.cs" />
     <Compile Include="Bootstrapper\ProductInstaller.cs" />
     <Compile Include="Business\IDomainService.cs" />
     <Compile Include="Business\IProductService.cs" />
@@ -135,7 +143,11 @@
     <Compile Include="TraceLogger\Logger.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="log4net.config" />
+    <None Include="Properties\PublishProfiles\WebApiIISPublish.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
