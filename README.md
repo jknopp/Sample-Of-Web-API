@@ -64,7 +64,7 @@ After this implentation , all apicontroller release this Activator class and **c
 
 **Log4net** is a usefull component for all project because it's easy to configuration and simple to use.
 
-Download the log4net package with nugget.And download *[my other project](https://github.com/mfarkan/Log4NetCustomLogger)* to use with it :)
+Download the log4net package with nugget and download *[my other project](https://github.com/mfarkan/Log4NetCustomLogger)* to use with it :)
 
 ## Unit Tests For API
 
