@@ -37,6 +37,18 @@ In this sample, using the **IHttpControllerActivator**. It's resolve controller 
             return controller;
         }
     }
+public class Release : IDisposable
+    {
+        private readonly Action _release;
+        public Release(Action release)
+        {
+            this._release = release;
+        }
+        public void Dispose()
+        {
+            this._release();
+        }
+    }
 ```
 **Here is Controller Installer ;**
 ```c#
