@@ -115,7 +115,6 @@ Here is the TestControllerClass;
         }
 ```
 ## Global Exception Logging And Handling
-It's come to life with Asp. NET Web API 2.1.
 
 All unhandled exceptions can now be logged through one central mechanism, and the behavior for unhandled exceptions can be customized.([*Global Logging*](https://docs.microsoft.com/en-us/aspnet/web-api/overview/releases/whats-new-in-aspnet-web-api-21))
 
